@@ -5,7 +5,7 @@ const UserAvatar = ({users,count}) => {
     <>
       <div className="flex items-center gap-2 mt-2">
         <div className="flex -space-x-4">
-          {users.map(
+          {users?.map(
             (item, index) =>
               index < count && (
                 <img
@@ -18,7 +18,7 @@ const UserAvatar = ({users,count}) => {
                 />
               )
           )}
-          {users.length > count && (
+          {users?.length > count && (
             <p className="flex items-center justify-center w-10 h-10 text-xs font-medium text-[#606C80] bg-[#F2F4F7] rounded-full cursor-pointer">{`+${
               users.length - count
             }`}</p>
